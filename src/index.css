@@ -1,1 +1,30 @@
 @import "tailwindcss";
+
+.pokemon-list {
+  perspective: 500px;
+  transform-style: preserve-3d;
+}
+
+.pokemon-li {
+  transition: transform 0.2s;
+}
+
+.pokemon-li:hover {
+  transform: translateZ(1.5rem);
+}
+
+.pokemon-li:has(+ .pokemon-li:hover),
+.pokemon-li:hover + .pokemon-li {
+  transform: translateZ(1rem);
+}
+
+.pokemon-li:has(+ .pokemon-li + .pokemon-li:hover),
+.pokemon-li:hover + .pokemon-li + .pokemon-li {
+  transform: translateZ(0.7rem);
+}
+
+.pokemon-li:has(+ .pokemon-li + .pokemon-li + .pokemon-li:hover),
+.pokemon-li:hover + .pokemon-li + .pokemon-li + .pokemon-li {
+  transform: translateZ(0.6.5rem);
+}
+

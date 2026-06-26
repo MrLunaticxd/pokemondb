@@ -8,7 +8,7 @@ function App() {
   //List of pokemon that the API will serve
   const [pokemons, setPokemons] = useState([])
 
-  const [activeUrl, setActiveUrl] = useState("https://pokeapi.co/api/v2/pokemon")
+  const [activeUrl, setActiveUrl] = useState("https://pokeapi.co/api/v2/pokemon-species")
   const [nextUrl, setNextUrl] = useState("")
   const [prevUrl, setPrevUrl] = useState("")
   
